@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import sun from "../assets/Sun.svg";
 import tick from "../assets/tick.svg";
 import "../../src/App.css";
 
 const Hero = () => {
+  useEffect(() => {
+    // Select the input element by id
+    const inputElement = document.querySelector(".firstTextbox");
+    console.log(inputElement);
+
+    // Do something with the input element
+    if (inputElement) {
+      inputElement.style.backgroundColor = "lightyellow"; // Example action
+    }
+  });
   return (
     <div className="bg-[#FBFBFB] items-center ">
       <div className=" pb-8">
@@ -39,7 +49,7 @@ const Hero = () => {
             </div>
             <input
               type="text"
-              name=""
+              name="firstTextbox"
               placeholder="Add new goal... "
               className="h-8  w-full ml-2 outline-none border-none placeholder-gray-400  grow"
             />
