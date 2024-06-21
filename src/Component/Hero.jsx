@@ -1,5 +1,6 @@
 import React from "react";
 import sun from "../assets/Sun.svg";
+import tick from "../assets/tick.svg";
 import "../../src/App.css";
 
 const Hero = () => {
@@ -27,12 +28,20 @@ const Hero = () => {
             Please set all the 3 goals!
           </p>
           <div className="textarea mt-4 h-full  bg-[#FFFFFF] md:h-20 p-3 border-solid border-2 rounded-2xl flex justify-start items-center ">
-            <div className="circle h-6 w-6  border-solid border-2  border-[#61481C] rounded-full shrink-0"></div>
+            <div
+              className="circle h-6 w-6  border-solid border-2  border-[#61481C] rounded-full shrink-0 flex justify-center items-center  cursor-pointer  "
+              onClick={() => {
+                const circle = document.querySelector(".circle");
+                circle.style.backgroundColor = "#48A300";
+              }}
+            >
+              <img src={tick} alt="tick" className="tick align-center" />
+            </div>
             <input
               type="text"
               name=""
               placeholder="Add new goal... "
-              className="h-8  ml-2 outline-none border-none placeholder-gray-400  grow"
+              className="h-8  w-full ml-2 outline-none border-none placeholder-gray-400  grow"
             />
           </div>
           <div className="textarea mt-4 h-full  bg-[#FFFFFF] md:h-20 p-3 border-solid border-2 rounded-2xl flex justify-start items-center ">
@@ -41,16 +50,16 @@ const Hero = () => {
               type="text"
               name=""
               placeholder="Add new goal... "
-              className="h-8  ml-2 outline-none border-none placeholder-gray-400  grow"
+              className="h-8 w-full  ml-2 outline-none border-none placeholder-gray-400  "
             />
-          </div>{" "}
+          </div>
           <div className="textarea mt-4 h-full  bg-[#FFFFFF] md:h-20 p-3 border-solid border-2 rounded-2xl flex justify-start items-center ">
             <div className="circle h-6 w-6  border-solid border-2  border-[#61481C] rounded-full shrink-0"></div>
             <input
               type="text"
               name=""
               placeholder="Add new goal... "
-              className="h-full  ml-2 outline-none border-none placeholder-gray-400   grow"
+              className="h-8 w-full ml-2 outline-none border-none placeholder-gray-400    "
             />
           </div>
           <p className=" quote text-center font-medium mt-8">
